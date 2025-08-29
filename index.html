@@ -1,0 +1,137 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-..." 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Dashboard -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-film" aria-label="Movie Explorer Logo Icon"></i>
+                <span>Movie Explorer</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home" aria-label="Home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-fire" aria-label="Trending"></i> Trending</a></li>
+                    <li><a href="#"><i class="fas fa-star" aria-label="Top Rated"></i> Top Rated</a></li>
+                    <li><a href="#"><i class="fas fa-clock" aria-label="Upcoming"></i> Upcoming</a></li>
+                    <li><a href="#"><i class="fas fa-heart" aria-label="Favorites"></i> Favorites</a></li>
+                    <li><a href="#"><i class="fas fa-search" aria-label="Search"></i> Search</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Movie Explorer</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search movies..." aria-label="Search input">
+                    <button aria-label="Search button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="auth-links">
+                    <a href="login.html" id="loginLink" class="header-auth-btn btn-red"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    <a href="signup.html" id="signupLink" class="header-auth-btn btn-red"><i class="fas fa-user-plus"></i> Sign Up</a>
+                    <button id="logoutBtn" style="display: none;" class="header-auth-btn btn-redi class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- Category Section -->
+                <div class="category-section">
+                    <h2>Popular Categories</h2>
+                    <div class="category-grid">
+                        <div class="category-card"><i class="fas fa-rocket" aria-label="Action"></i><h3>Action</h3></div>
+                        <div class="category-card"><i class="fas fa-laugh" aria-label="Comedy"></i><h3>Comedy</h3></div>
+                        <div class="category-card"><i class="fas fa-heart" aria-label="Romance"></i><h3>Romance</h3></div>
+                        <div class="category-card"><i class="fas fa-ghost" aria-label="Horror"></i><h3>Horror</h3></div>
+                        <div class="category-card"><i class="fas fa-space-shuttle" aria-label="Sci-Fi"></i><h3>Sci-Fi</h3></div>
+                    </div>
+                </div>
+
+                <!-- Movie Grid -->
+                <div class="movie-section">
+                    <h2>Top Rated Movies</h2>
+                    <div class="movie-grid" id="movieGrid">
+                        <!-- Movies will be loaded here by JS -->
+                        <!-- Example Card (JS will inject this) -->
+                        <!--
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="poster.jpg" alt="Movie Title" loading="lazy">
+                            </div>
+                            ...
+                        </div>
+                        -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button id="prevPage" class="pagination-btn" aria-label="Previous page">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="page-numbers" id="pageNumbers"></div>
+                        <button id="nextPage" class="pagination-btn" aria-label="Next page">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-links">
+            <div>
+                <a href="#">Audio Description</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Legal Notices</a>
+                <button class="footer-btn">Service Code</button>
+            </div>
+            <div>
+                <a href="#">Help Centre</a>
+                <a href="#">Jobs</a>
+                <a href="#">Cookie Preferences</a>
+            </div>
+            <div>
+                <a href="#">Gift Cards</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Corporate Information</a>
+            </div>
+            <div>
+                <a href="#">Media Centre</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 1997-2025 Movie Explorer, Inc.
+        </div>
+    </footer>
+</body>
+</html>

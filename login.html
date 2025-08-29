@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Movie Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha512-..." 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <div class="auth-logo">
+      <i class="fas fa-film"></i>
+      <h2>Movie Explorer</h2>
+    </div>
+    <form id="loginForm">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="loginUsername" placeholder="Username" required />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="loginPassword" placeholder="Password" required />
+      </div>
+      <button type="submit" class="auth-btn">
+        <span>Login</span>
+        <span class="btn-icon"><i class="fas fa-sign-in-alt"></i></span>
+      </button>
+      <p id="loginError" class="error-message"></p>
+    </form>
+    <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+  </div>
+  <div id="successModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <div class="modal-message" id="modalMessage">Thank you for logging in!<br>Login successful.</div>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html> 
